@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>A creepy story</title>
+<style> 
+body.dark {
+    color: white;
+    background: black;
+}
+button {
+    display: block;
+    margin: 5px;
+}
+.textEntry {
+    margin-top: 12px;
+    margin-bottom: 15px;
+}
+</style>
+</head>
+<body>
+<h1>The Basement</h1>
+<p id="story">I wanted to find my friend, and he was hiding in the basement of the house.</p>
+<button onclick="godark()">Get in the mood of scary story</button>
+<div class="textEntry">Type your name here, If you can: <input type="text" id="name"></div>
+<button onclick="typeandscream()">Please, Please dont click this button</button>
+<button onclick="ending()">Tell, What happend next?</button>
+<script>
+function typeandscream () {
+var personname = document.getElementById ("name").value;
+alert ("I told not to click on that button "+ personname);
+}
+function godark () {
+document.body.className = "dark";
+}
+function ending () {
+document.getElementById ("story").innerHTML = "I began searching the haunted basement. There you are!";
+}
+</script>
+</body>
+</html>
